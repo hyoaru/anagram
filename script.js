@@ -49,11 +49,8 @@ function incorrectlyGuessedWordsAppend(word) {
     incorrectlyGuessedWords.appendChild(tr)
 }
 
-function correctlyGuessedWordsReset() {
+function guessedWordsReset() {
     correctlyGuessedWords.replaceChildren();
-}
-
-function incorrectlyGuessedWordsReset() {
     incorrectlyGuessedWords.replaceChildren();
 }
 
@@ -66,10 +63,9 @@ async function resetAnagram() {
     await generateAnagramObject();
     unpackGeneratedAnagramObject();
     reflectAnagramWord();
-    reflectWordsLeft();
-    correctlyGuessedWordsReset();
-    incorrectlyGuessedWordsReset();
+    guessedWordsReset();
     guessedWordsListReset();
+    reflectWordsLeft();
 }
 
 function printCheats(){
